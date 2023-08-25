@@ -41,9 +41,7 @@ function displayUsers(){
        
        
 
-    //    let resultState = addState();
-    //    let stateElement=document.getElementById("state").add(resultState);
-
+  
        usersContainer.appendChild(userDiv);
        userDiv.appendChild(nameElement);
        userDiv.appendChild(emailElement );
@@ -58,14 +56,14 @@ function add(){
     
     let name = document.getElementById('name');
     let email = document.getElementById('email');
-    let rState = addState();
-    let resultState = document.getElementById('state').innerHTML = rState;
+    // let rState = addState();
+    let resultState = document.getElementById('state');
 
 
     let user = {
         name: name.value,
         email: email.value,
-        state: resultState
+        state: resultState,
     }
     
     
@@ -74,5 +72,5 @@ function add(){
     addUser(user); 
     displayUsers();
     
-    
+    console.log(users)
 }
